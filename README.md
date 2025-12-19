@@ -4,7 +4,7 @@ Greg has a tree of nodes containing integer data. He wants to insert a node with
 
 ## Function Description
 
-Complete the balancedForest function in the editor below. It must return an integer representing the minimum value of  that can be added to allow creation of a balanced forest, or  if it is not possible.
+Complete the balancedForest function in the editor below. It must return an integer representing the minimum value of `c[w]` that can be added to allow creation of a balanced forest, or `-1` if it is not possible.
 
 The function balancedForest has the following parameter(s):
 
@@ -14,15 +14,18 @@ The function balancedForest has the following parameter(s):
 ## Input Format
 
 * The first line contains a single integer, `q`, the number of queries.
-* Each of the following  sets of lines is as follows:
+* Each of the following `q` sets of lines is as follows:
   * The first line contains an integer, `n`, the number of nodes in the tree.
-  * The second line contains  space-separated integers describing the respective values of , where each  denotes the value at node .
-  * Each of the following  lines contains two space-separated integers,  and , describing edge  connecting nodes  and .
+  * The second line contains `n` space-separated integers describing the respective values of `vals[1], vals[2], ..., vals[n]`, where each `vals[i]` denotes the value at node `i`.
+  * Each of the following `n-1` lines contains two space-separated integers, `x[j]` and `y[j]`, describing edge `j` connecting nodes `x[j]` and `y[j]`.
 
 ## Constraints
 
-Each query forms a valid undirected tree.
+* 1 <= q <= 5
+* 1 <= n <= 5 x 10^4
+* 1 <= vals[i] <= 10^9
+* Each query forms a valid undirected tree.
 
 ## Output Format
 
-For each query, return the minimum value of the integer . If no such value exists, return  instead.
+For each query, return the minimum value of the integer `vals[w]`. If no such value exists, return `-1` instead.
